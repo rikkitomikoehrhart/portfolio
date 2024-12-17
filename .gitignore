@@ -1,0 +1,12 @@
+# Ignore Mac files
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Ignore CodeIgniter files
+/system/
+/writable/
+/vendor/
+/node_modules/
+.env
+
