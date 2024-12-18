@@ -13,3 +13,4 @@
 # Ignore .htaccess
 .htaccess
 portfolio/public/.htaccess
+.vscode/settings.json
