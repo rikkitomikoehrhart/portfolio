@@ -10,3 +10,6 @@
 /node_modules/
 .env
 
+# Ignore .htaccess
+.htaccess
+portfolio/public/.htaccess
