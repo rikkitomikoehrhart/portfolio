@@ -13,7 +13,10 @@ DESCRIPTION: This is the header template for my portfolio
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
+        <!-- TITLE AND FAVICON -->
         <title>Rikki Tomiko Ehrhart Portfolio</title>
+        <link rel="icon" href="/favicon.ico" type="image/x-icon">
+
         
         <!-- LINK TO STYLE SHEET -->
         <link rel="stylesheet" href="/assets/css/styles.css">
