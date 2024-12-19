@@ -8,7 +8,10 @@ DESCRIPTION: This is the Portfolio page view that shows the
              website that is housed at rikkitomikoehrhart.com 
              and is also on Github
 -->
-<div class="main">
+<!-- LINK TO CSS FOR PORTFOLIO -->
+<link rel="stylesheet" href="/assets/css/portfolio.css">
+
+<div class="portfolio">
 
     <!-- TITLE SECTION -->
     <div class="titleSection">
@@ -43,17 +46,31 @@ DESCRIPTION: This is the Portfolio page view that shows the
 
                     <!-- PROJECT LANGUAGES, TOOLS and FEATURES -->
                     <div class="cardLangToolsFeat">
-                        <p>
-                            <? esc($project['languages'])?>
-                        </p>
-                        <p>
-                            <? esc($project['tools'])?>
-                        </p>
-                        <p>
-                            <? esc($project['features'])?>
-                        </p>
+                        <div class="set">
+                            <?php if (!empty($project['languages'])): ?>    
+                                <?php foreach ($project['languages'] as $language): ?>
+                                    <p class="language <?= esc($language) ?>">
+                                        <?= esc($language) ?>
+                                    </p>
+                                <?php endforeach ?>
+                            <?php endif ?>
+                            <?php if (!empty($project['tools'])): ?>    
+                                <?php foreach ($project['tools'] as $tool): ?>
+                                    <p class="tool <?= esc($tool) ?>">
+                                        <?= esc($tool) ?>
+                                    </p>
+                                <?php endforeach ?>
+                            <?php endif ?>
+                            <?php if (!empty($project['features'])): ?>    
+                                <?php foreach ($project['features'] as $feature): ?>
+                                    <p class="feature <?= esc($feature) ?>">
+                                        <?= esc($feature) ?>
+                                    </p>
+                                <?php endforeach ?>
+                            <?php endif ?>
+                        </div>
                     </div>
-
+                </div>
             <?php endforeach ?>
         <?php else: ?>
             <h3>No Projects</h3>

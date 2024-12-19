@@ -1,0 +1,95 @@
+/*
+AUTHOR: Rikki Tomiko Ehrhart (rikki.ehrhart@g.austincc.edu)
+LAST UPDATE: 12.19.2024
+
+FILE: portfolio/public/assets/css/portfolio.css
+DESCRIPTION: This is the colors and styles for my portfolio 
+             project cards' tags for my portfolio website 
+             that is housed at rikkitomikoehrhart.com and is 
+             also on Github
+*/
+
+/* COLOR AND FONT VARIABLES */
+:root {
+    /*COLORS */
+    --shadow: #04211187;
+}
+
+
+/* LANGUAGES */
+.language, .tool, .feature {
+    font-size: .75rem;
+    padding: 3px 7px;
+    box-shadow: 2px 2px 2px var(--shadow);
+    margin: 2px 4px;
+    font-weight: 600;
+}
+
+.HTML {
+    background-color: rgb(246, 86, 48);
+    color: rgb(232, 232, 232);
+}
+
+.CSS {
+    background-color: rgb(25, 96, 222);
+    color: rgb(232, 232, 232);
+}
+
+.JavaScript {
+   background-color: rgb(232, 203, 83);
+   color: rgb(43, 44, 41); 
+}
+
+.PHP {
+    background-color: rgb(104, 110, 162);
+    color: black;
+}
+
+
+/* TOOLS */
+.Figma {
+    background-color: rgb(38, 41, 47);
+    color: rgb(247, 97, 90);
+}
+
+.CodeIgniter {
+    background-color: rgb(235, 52, 40);
+    color: rgb(247, 247, 247);
+}
+
+.MVC {
+    background-color: rgb(32, 164, 76);
+    color: white;
+}
+
+.Templating {
+    background-color: rgb(192, 189, 212);
+    color: black;
+}
+
+.Squarespace {
+    background-color: rgb(247 247 247);
+    color: black;
+}
+
+
+/* FEATURES */
+.Responsive {
+    background-color: rgb(156, 210, 216);
+    color: rgb(67, 67, 67);
+}
+
+.Drop-down.Navigation.Menu {
+    background-color: rgb(115, 89, 153);
+    color: rgb(198, 140, 177);
+}
+
+.Gallery {
+    background-color: rgb(203, 130, 83);
+    color: rgb(73, 62, 55);
+}
+
+.IDX {
+    background-color: rgb(0, 132, 197);
+    color: rgb(244, 210, 79);
+}

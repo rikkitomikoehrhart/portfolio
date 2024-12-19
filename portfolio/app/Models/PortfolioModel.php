@@ -39,7 +39,6 @@ class PortfolioModel extends Model
             $projects = [$this->where(['id' => $id])->first()];
         }
 
-        // Decode JSON fields to PHP arrays
         $decodedProjects = array_map(function($project) {
             $project['languages'] = json_decode($project['languages'], true);
             $project['features'] = json_decode($project['features'], true);
