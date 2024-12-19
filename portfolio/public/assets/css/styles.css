@@ -209,6 +209,86 @@ p {
 }
 
 
+/* RESUME STYLES */
+.resume {
+    display: flex;
+    flex-direction: column;
+    margin: 0 25px 25px 25px;
+    padding: 20px;
+    background-color: #cbbeac25;
+    box-shadow: 10px 10px 20px var(--shadow);
+}
+
+.headerSection h2 {
+    text-align: center;
+    padding-bottom: 30px;
+}
+
+.resume h2, .resume p {
+    color: var(--darkestGreen);
+}
+
+.resume h2 {
+    padding: 10px 0;
+}
+
+
+.headerSection p:first-of-type {
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+.headerSection {
+    font-size: 1.1rem;
+    color: var(--darkPink)
+}
+
+.headerSection .bold {
+    font-size: 1.11rem;
+    font-weight: 700;
+    color: var(--darkPink);
+    text-shadow: 1px 1px 1px var(var(--shadow));
+}
+
+hr {
+    border: 3px solid var(--lightGreen);
+    margin: 20px 0;
+    box-shadow: 1px 1px 1px var(--shadow);
+}
+
+.resumeCard {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 25px;
+}
+
+.resumeEntry {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.resumeCard .resumeEntry:first-of-type {
+    margin-bottom: 0;
+}
+
+.resume em {
+    font-weight: bold;
+}
+
+.resumeList {
+    columns: 2;
+}
+
+.skills {
+    margin-bottom: 10px;
+}
+
+.resumeCard ul {
+    margin-bottom: 10px;
+    margin-left: 15px;
+}
 
 
 
@@ -284,6 +364,31 @@ footer {
     .welcomeSummary {
         text-align: right;
     }
+
+    /* RESUME PAGE LAYOUT */
+    .resume {
+        padding: 50px;
+    }
+    .resumeEntry {
+        display: flex;
+        flex-direction: row;
+    }
+    .skills {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-bottom: 40px;
+    }
+    .skills div:first-of-type {
+        width: 30%;
+    }
+    .skills div:last-of-type {
+        width: 70%;
+    }
+    .skillsTitle {
+        text-align: left;
+    }
+
 
 
     
