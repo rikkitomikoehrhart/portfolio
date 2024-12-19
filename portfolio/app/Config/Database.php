@@ -24,31 +24,7 @@ class Database extends Config
      *
      * @var array<string, mixed>
      */
-    public array $default = [
-        'DSN'          => '',
-        'hostname'     => 'localhost',
-        'username'     => '',
-        'password'     => '',
-        'database'     => '',
-        'DBDriver'     => 'MySQLi',
-        'DBPrefix'     => '',
-        'pConnect'     => false,
-        'DBDebug'      => true,
-        'charset'      => 'utf8mb4',
-        'DBCollat'     => 'utf8mb4_general_ci',
-        'swapPre'      => '',
-        'encrypt'      => false,
-        'compress'     => false,
-        'strictOn'     => false,
-        'failover'     => [],
-        'port'         => 3306,
-        'numberNative' => false,
-        'dateFormat'   => [
-            'date'     => 'Y-m-d',
-            'datetime' => 'Y-m-d H:i:s',
-            'time'     => 'H:i:s',
-        ],
-    ];
+    
 
     //    /**
     //     * Sample database connection for SQLite3.
@@ -190,6 +166,36 @@ class Database extends Config
     public function __construct()
     {
         parent::__construct();
+
+    // Load environment variables from EnvLoader.php
+    $env = require __DIR__ . '/EnvLoader.php';
+
+
+    $this->default = [
+        'DSN'          => '',
+        'hostname'     => $env['hostname'],
+        'username'     => $env['username'],
+        'password'     => $env['password'],
+        'database'     => $env['database'],
+        'DBDriver'     => $env['DBDriver'],
+        'DBPrefix'     => '',
+        'pConnect'     => false,
+        'DBDebug'      => (ENVIRONMENT !== 'production'),
+        'charset'      => 'utf8mb4',
+        'DBCollat'     => 'utf8mb4_general_ci',
+        'swapPre'      => '',
+        'encrypt'      => false,
+        'compress'     => false,
+        'strictOn'     => false,
+        'failover'     => [],
+        'port'         => 3306,
+        'numberNative' => false,
+        'dateFormat'   => [
+            'date'     => 'Y-m-d',
+            'datetime' => 'Y-m-d H:i:s',
+            'time'     => 'H:i:s',
+        ],
+    ];
 
         // Ensure that we always set the database group to 'tests' if
         // we are currently running an automated test suite, so that
