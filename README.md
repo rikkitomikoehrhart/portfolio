@@ -6,9 +6,9 @@
 
 --- 
 ## Table of Contents
-- [The Website](https://github.com/rikkitomikoehrhart/portfolio/edit/main/README.md#the-website)
-- [Tools and Technologies](https://github.com/rikkitomikoehrhart/portfolio/edit/main/README.md#tools-and-technologies)
-- [ToDos](https://github.com/rikkitomikoehrhart/portfolio/edit/main/README.md#todos)
+- [The Website](https://github.com/rikkitomikoehrhart/portfolio#the-website)
+- [Tools and Technologies](https://github.com/rikkitomikoehrhart/portfolio#tools-and-technologies)
+- [ToDos](https://github.com/rikkitomikoehrhart/portfolio#todos)
 
 
 ---
