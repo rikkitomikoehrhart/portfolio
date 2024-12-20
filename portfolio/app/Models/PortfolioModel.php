@@ -34,21 +34,39 @@ class PortfolioModel extends Model
     public function getProjects($id = false)
     {
         if ($id === false) {
+            // Get all projects
             $projects = $this->findAll();
+    
+            // Decode JSON fields for each project
+            $decodedProjects = array_map(function($project) {
+                $project['languages'] = !empty($project['languages']) ? json_decode($project['languages'], true) : [];
+                $project['features'] = !empty($project['features']) ? json_decode($project['features'], true) : [];
+                $project['tools'] = !empty($project['tools']) ? json_decode($project['tools'], true) : [];
+                $project['images'] = !empty($project['images']) ? json_decode($project['images'], true) : [];
+                $project['links'] = !empty($project['links']) ? json_decode($project['links'], true) : [];
+                $project['reflections'] = !empty($project['reflections']) ? json_decode($project['reflections'], true) : [];
+                return $project;
+            }, $projects);
+    
+            return $decodedProjects;
         } else {
-            $projects = [$this->where(['id' => $id])->first()];
-        }
-
-        $decodedProjects = array_map(function($project) {
-            $project['languages'] = json_decode($project['languages'], true);
-            $project['features'] = json_decode($project['features'], true);
-            $project['tools'] = json_decode($project['tools'], true);
-            $project['images'] = json_decode($project['images'], true);
-            $project['links'] = json_decode($project['links'], true);
-            $project['reflections'] = json_decode($project['reflections'], true);
+            // Get a single project
+            $project = $this->where(['id' => $id])->first();
+    
+            // If no project is found, return null
+            if (empty($project)) {
+                return null;
+            }
+    
+            // Decode JSON fields for the single project
+            $project['languages'] = !empty($project['languages']) ? json_decode($project['languages'], true) : [];
+            $project['features'] = !empty($project['features']) ? json_decode($project['features'], true) : [];
+            $project['tools'] = !empty($project['tools']) ? json_decode($project['tools'], true) : [];
+            $project['images'] = !empty($project['images']) ? json_decode($project['images'], true) : [];
+            $project['links'] = !empty($project['links']) ? json_decode($project['links'], true) : [];
+            $project['reflections'] = !empty($project['reflections']) ? json_decode($project['reflections'], true) : [];
+    
             return $project;
-        }, $projects);
-
-        return $decodedProjects;
+        }
     }
 }

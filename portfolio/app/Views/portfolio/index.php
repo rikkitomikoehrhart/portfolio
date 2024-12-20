@@ -26,50 +26,51 @@ DESCRIPTION: This is the Portfolio page view that shows the
 
                 <!-- PROJECT CARD -->
                 <div class="projectCard">
-
-                    <!-- PROJECT TITLE -->
-                    <div class="cardTitle">
-                        <h3><?= esc($project['name'])?></h3>
-                    </div>
-
-                    <!-- PROJECT IMAGE -->
-                    <div class="cardImg">
-                        <img src="/projects/<?= esc($project['id'])?>/screenshot1.png">
-                    </div>
-
-                    <!-- PROJECT SHORT DESCRIPTION -->
-                    <div class="cardDescription">
-                        <p>
-                            <?= esc($project['short_description'])?>
-                        </p>
-                    </div>
-
-                    <!-- PROJECT LANGUAGES, TOOLS and FEATURES -->
-                    <div class="cardLangToolsFeat">
-                        <div class="set">
-                            <?php if (!empty($project['languages'])): ?>    
-                                <?php foreach ($project['languages'] as $language): ?>
-                                    <p class="language <?= esc($language) ?>">
-                                        <?= esc($language) ?>
-                                    </p>
-                                <?php endforeach ?>
-                            <?php endif ?>
-                            <?php if (!empty($project['tools'])): ?>    
-                                <?php foreach ($project['tools'] as $tool): ?>
-                                    <p class="tool <?= esc($tool) ?>">
-                                        <?= esc($tool) ?>
-                                    </p>
-                                <?php endforeach ?>
-                            <?php endif ?>
-                            <?php if (!empty($project['features'])): ?>    
-                                <?php foreach ($project['features'] as $feature): ?>
-                                    <p class="feature <?= esc($feature) ?>">
-                                        <?= esc($feature) ?>
-                                    </p>
-                                <?php endforeach ?>
-                            <?php endif ?>
+                    <a href="/portfolio/view/<?= esc($project['id']) ?>">
+                        <!-- PROJECT TITLE -->
+                        <div class="cardTitle">
+                            <h3><?= esc($project['name'])?></h3>
                         </div>
-                    </div>
+
+                        <!-- PROJECT IMAGE -->
+                        <div class="cardImg">
+                            <img src="/projects/<?= esc($project['id'])?>/screenshot1.png">
+                        </div>
+
+                        <!-- PROJECT SHORT DESCRIPTION -->
+                        <div class="cardDescription">
+                            <p>
+                                <?= esc($project['short_description'])?>
+                            </p>
+                        </div>
+
+                        <!-- PROJECT LANGUAGES, TOOLS and FEATURES -->
+                        <div class="cardLangToolsFeat">
+                            <div class="set">
+                                <?php if (!empty($project['languages'])): ?>    
+                                    <?php foreach ($project['languages'] as $language): ?>
+                                        <p class="language <?= esc($language) ?>">
+                                            <?= esc($language) ?>
+                                        </p>
+                                    <?php endforeach ?>
+                                <?php endif ?>
+                                <?php if (!empty($project['tools'])): ?>    
+                                    <?php foreach ($project['tools'] as $tool): ?>
+                                        <p class="tool <?= esc($tool) ?>">
+                                            <?= esc($tool) ?>
+                                        </p>
+                                    <?php endforeach ?>
+                                <?php endif ?>
+                                <?php if (!empty($project['features'])): ?>    
+                                    <?php foreach ($project['features'] as $feature): ?>
+                                        <p class="feature <?= esc($feature) ?>">
+                                            <?= esc($feature) ?>
+                                        </p>
+                                    <?php endforeach ?>
+                                <?php endif ?>
+                            </div>
+                        </div>
+                    </a>
                 </div>
             <?php endforeach ?>
         <?php else: ?>

@@ -12,4 +12,4 @@ $routes->get('/', 'Home::index');
 $routes->get('/resume', 'Resume::index');
 // PORTFOLIO PAGE(S)
 $routes->get('/portfolio', 'Portfolio::index');
-$routes->get('portfolio/(:segment)', 'Portfolio::show/$1');
+$routes->get('portfolio/view/(:num)', 'Portfolio::view/$1');

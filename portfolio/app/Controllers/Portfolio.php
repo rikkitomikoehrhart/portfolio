@@ -31,14 +31,16 @@ class Portfolio extends BaseController
     {
         $model = model(PortfolioModel::class);
 
+        $id = (int) $id;
+
         $data['project'] = $model->getProjects($id);
 
-        if (empty($data['project'])) {
+        if (empty($data['project']) || !isset($data['project']['name'])) {
             throw new \CodeIgniter\Exceptions\PageNotFoundException('Project not found.');
         }
 
         return view('templates/header', $data)
-        . view('news/view')
-        . view('templates/footer');
+         . view('portfolio/view', $data) 
+         . view('templates/footer', $data);
     }
 }
