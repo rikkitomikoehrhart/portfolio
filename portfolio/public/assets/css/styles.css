@@ -1,6 +1,6 @@
 /*
 AUTHOR: Rikki Tomiko Ehrhart (rikki.ehrhart@g.austincc.edu)
-LAST UPDATE: 12.19.2024
+LAST UPDATE: 01.14.2025
 
 FILE: portfolio/public/assets/css/styles.css
 DESCRIPTION: This is the style and layouts for my portfolio 
@@ -431,6 +431,109 @@ hr {
 }
 
 
+/* CONTACT PAGE STYLES */
+.contactMe {
+    background: #c7f6e320;
+    border-radius: 20px;
+    margin: 10px;
+    padding: 75px 25px;
+    box-shadow: 1px 1px 13px #00000040;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 750px;
+}
+
+.contactMe h2 {
+    font-size: 3rem;
+    text-align: center;
+    text-shadow: 1px 1px 3px var(--greenShadow);
+    font-family: var(--mainFont);
+    color: var(--darkestGreen);
+}
+
+.contactForm {
+    width: 100%;
+}
+
+.contactForm form{
+    display: flex;
+    flex-direction: column;
+}
+
+.contactForm label {
+    font-size: 1.25rem;
+    color: var(--darkestGreen);
+    margin-top: 20px;
+}
+
+.contactForm input, .contactForm textarea {
+    border: none;
+    background: #dfe8e475;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 7px #00000040;
+}
+
+.contactForm textarea {
+    margin-bottom: 25px;
+}
+
+
+.contactForm button {
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    background-color: var(--darkestGreen);
+    box-shadow: 1px 1px 7px #00000040;
+    font-size: 1rem;
+    transition: background-color 1s ease, box-shadow 1s ease, font-size 1s ease;
+}
+
+.contactForm button:hover {
+    background-color: var(--darkPink);
+    box-shadow: none;
+    font-size: .95rem;
+}
+
+.contactForm button:active {
+    background-color: var(--mediumPink);
+    font-size: .9rem;
+}
+
+.message {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.message p {
+    text-align: center;
+}
+
+.success {
+    width: 100%;
+    color: green;
+    padding: 4px;
+    border-radius: 5px;
+}
+
+.error {
+    width: 100%;
+    color: red;
+    padding: 4px;
+    border-radius: 5px;
+}
+
+
+
+
+
+
+
 /* FOOTER */
 
 footer {
@@ -545,6 +648,11 @@ footer {
     }
 
 
+
+    .contactMe {
+        margin: auto;
+        min-width: 750px;
+    }
 
 
     
