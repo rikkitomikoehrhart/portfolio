@@ -25,6 +25,7 @@ DESCRIPTION: This is the colors and styles for my portfolio
     font-weight: 600;
 }
 
+/*
 .HTML {
     background-color: rgb(246, 86, 48);
     color: rgb(232, 232, 232);
@@ -44,9 +45,10 @@ DESCRIPTION: This is the colors and styles for my portfolio
     background-color: rgb(104, 110, 162);
     color: black;
 }
-
+*/
 
 /* TOOLS */
+/*
 .Figma {
     background-color: rgb(38, 41, 47);
     color: rgb(247, 97, 90);
@@ -71,9 +73,11 @@ DESCRIPTION: This is the colors and styles for my portfolio
     background-color: rgb(247 247 247);
     color: black;
 }
+    */
 
 
 /* FEATURES */
+/*
 .Responsive {
     background-color: rgb(156, 210, 216);
     color: rgb(67, 67, 67);
@@ -93,3 +97,4 @@ DESCRIPTION: This is the colors and styles for my portfolio
     background-color: rgb(0, 132, 197);
     color: rgb(244, 210, 79);
 }
+*/

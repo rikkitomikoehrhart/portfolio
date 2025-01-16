@@ -1,6 +1,6 @@
 <!--
 AUTHOR: Rikki Tomiko Ehrhart (rikki.ehrhart@g.austincc.edu)
-LAST UPDATE: 12.19.2024
+LAST UPDATE: 01.16.2025
 
 FILE: portfolio/app/Views/portfolio/view.php
 DESCRIPTION: This is the Portfolio Project page view that 
@@ -8,9 +8,6 @@ DESCRIPTION: This is the Portfolio Project page view that
              my portfolio website that is housed at 
              rikkitomikoehrhart.com and is also on Github
 -->
-<!-- LINK TO CSS FOR PORTFOLIO -->
-<link rel="stylesheet" href="/assets/css/portfolio.css">
-
 
 <div class="portfolio">
 
@@ -65,6 +62,27 @@ DESCRIPTION: This is the Portfolio Project page view that
     </div>
 
     <div class="etc">
+
+        <!-- LINKS BOX -->
+        <div class="linksBox">
+            <div class="liveLink">
+                <?php if (!empty($project['links'][0]) && $project['links'][0] !== 'none'): ?> 
+                    <p>LIVE LINK: </p>
+                    <a href="<?= esc($project['links'][0]) ?>" target="_blank">
+                        <?= esc($project['links'][0]) ?>
+                    </a>
+                <?php endif; ?>
+            </div>
+            <div class="gitLink">
+                <?php if (!empty($project['links'][1]) && $project['links'][1] !== 'none'): ?> 
+                    <p>GITHUB LINK: </p>
+                    <a href="<?= esc($project['links'][1]) ?>" target="_blank">
+                        <?= esc($project['links'][1]) ?>
+                    </a>
+                <?php endif; ?>
+            </div>
+        </div>
+
         <!-- REFLECTIONS -->
         <div class="reflections">
             <?php if (!empty($project['reflections'])): ?>
@@ -77,26 +95,6 @@ DESCRIPTION: This is the Portfolio Project page view that
                     <?php endforeach ?>
                 </ul>
             <?php endif ?>
-        </div>
-
-        <!-- LINKS BOX -->
-        <div class="linksBox">
-            <div class="liveLink">
-                <?php if (!empty($project['links'][0]) && $project['links'][0] !== 'none'): ?> 
-                    <p>Live Link: </p>
-                    <a href="<?= esc($project['links'][0]) ?>" target="_blank">
-                        <?= esc($project['links'][0]) ?>
-                    </a>
-                <?php endif; ?>
-            </div>
-            <div class="gitLink">
-                <?php if (!empty($project['links'][1]) && $project['links'][1] !== 'none'): ?> 
-                    <p>Github Repo Link: </p>
-                    <a href="<?= esc($project['links'][1]) ?>" target="_blank">
-                        <?= esc($project['links'][1]) ?>
-                    </a>
-                <?php endif; ?>
-            </div>
         </div>
 
 

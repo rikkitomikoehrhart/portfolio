@@ -1,6 +1,6 @@
 /*
 AUTHOR: Rikki Tomiko Ehrhart (rikki.ehrhart@g.austincc.edu)
-LAST UPDATE: 01.14.2025
+LAST UPDATE: 01.16.2025
 
 FILE: portfolio/public/assets/css/styles.css
 DESCRIPTION: This is the style and layouts for my portfolio 
@@ -46,7 +46,6 @@ DESCRIPTION: This is the style and layouts for my portfolio
 html, body {
     height: 100%;
     background-color: var(--white);
-    overflow-x: hidden;
 }
 
 body {
@@ -55,7 +54,9 @@ body {
     min-height: 100vh;
     justify-content: space-between;
     font-family: var(--mainFont);
-    color: var(--darkestGreen)
+    color: var(--darkestGreen);
+    max-width: 950px;
+    margin: auto;
 }
 
 .main {
@@ -112,7 +113,6 @@ p {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 1rem 0 1rem;
 }
 
 .navbar-icon img {
@@ -149,7 +149,6 @@ p {
     right: 0;
     flex-direction: column;
     align-items: flex-start;
-    padding: 1rem;
     width: 200px;
     list-style: none;
     z-index: 10;
@@ -219,6 +218,11 @@ p {
     padding: 20px;
     background-color: #cbbeac25;
     box-shadow: 10px 10px 20px var(--shadow);
+    font-size: .75rem;
+}
+
+.resume p, .resume a {
+    font-size: .75rem;
 }
 
 .headerSection h2 {
@@ -240,6 +244,17 @@ p {
     text-align: center;
     padding-bottom: 10px;
     font-size: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.headerSection p:first-of-type .dot {
+    display: none;
+}
+
+.headerSection p:first-of-type a {
+    font-family: var(--mainFont);
+    font-size: .9rem
 }
 
 .headerSection {
@@ -248,15 +263,15 @@ p {
 }
 
 .headerSection .bold {
-    font-size: 1.11rem;
+    font-size: .85rem;
     font-weight: 700;
     color: var(--darkPink);
     text-shadow: 1px 1px 1px var(var(--shadow));
 }
 
 hr {
-    border: 3px solid var(--lightGreen);
-    margin: 20px 0;
+    border: 1px solid var(--lightGreen);
+    margin: 15px 0;
     box-shadow: 1px 1px 1px var(--shadow);
 }
 
@@ -289,6 +304,7 @@ hr {
     margin-bottom: 10px;
 }
 
+
 .resumeCard ul {
     margin-bottom: 10px;
     margin-left: 15px;
@@ -297,11 +313,12 @@ hr {
 
 /* PORTFOLIO STYLES */
 .portfolio {
-    margin: 25px;
+    margin: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    max-width: 950px;
 }
 
 .titleSection h2 {
@@ -323,37 +340,48 @@ hr {
     box-shadow: 4px 4px 50px rgba(0, 0, 0, .25);
     margin: 25px 10px;
     border-radius: 10px;
+    border: 1px solid #00000025;
 }
 
 .projectCard:hover {
     cursor: pointer;
 }
 
+.projectCard a {
+    text-shadow: none;
+    font-size: 1rem;
+}
+
 .cardTitle h3 {
     font-size: 1.5rem;
-    color: var(--darkPink);
-    text-shadow: 1px 1px 2px var(--shadow);
+    color: var(--darkestGreen);
     font-family: var(--coding);
-    padding-bottom: 10px;
-    margin-bottom: 10px;
-    border-bottom: 1px solid var(--greenShadow);
+    margin-bottom: 5px;
+    min-height: 50px;
+    font-family: var(--mainFont);
+    line-height: 25px;
 }
 
 .cardImg img {
     width: 100%;
     box-shadow: 2px 2px 2px var(--shadow);
     margin-bottom: 10px;
+    transition: opacity 2s ease;
+}
+
+.cardImg img:hover {
+    opacity: 1;
 }
 
 .cardDescription {
     padding: 10px 0px;
-    border-bottom: 1px solid var(--greenShadow);
-    margin-bottom: 15px;
+    margin-bottom: 5px;
 }
 
 .cardDescription p {
-    font-size: 1.15rem;
-    text-align: center;
+    font-size: 1rem;
+    color: var(--darkestGreen);
+    min-height: 70px;
 }
 
 .set {
@@ -364,15 +392,15 @@ hr {
 }
 
 .set p {
-    padding-right: 10px;
+    padding-right: 5px;
 }
 
 /* VIEW PROJECT STYLES */
 .top img {
-    width: 90vw;
+    width: 90%;
     height: auto;
-    box-shadow: 5px 5px 25px var(--shadow);
-    margin: 15px 25px;
+    box-shadow: 0px 0px 30px var(--shadow);
+    margin: 25px;
 }
 
 .description {
@@ -384,40 +412,48 @@ hr {
     color: var(--darkestGreen)
 }
 
+.etc {
+    max-width: 950px;
+    margin: auto;
+}
 
 .reflections {
-    margin: 25px;
+    padding: none;
+    margin-left: 30px;
+    margin-right: 30px;
 }
 
 .reflections ul li {
-    padding-left: 25px;
     padding-bottom: 10px;
     list-style: none;
 }
 
 
 .linksBox {
-    width: 100vw;
-    background: linear-gradient(to top, var(--darkestGreen), var(--darkGreen));
-    padding: 25px;
-    margin-bottom: 25px;
-    box-shadow: 1px 1px 50px var(--shadow);
+    width: 100%;
+    /*background: linear-gradient(to top, var(--darkestGreen), var(--darkGreen));*/
+    margin: 50px 0;
+    /*box-shadow: 0px 0px 30px var(--shadow);*/
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
+    flex-wrap: wrap;
     align-items: center;
+    color: var(--darkestGreen);
 }
 
 .linksBox p {
-    font-size: 1rem;
-    color: white;
+    font-size: 1.25rem;
+    color: var(--darkestGreen);
     text-shadow: 1px 1px 2px var(--shadow);
     text-align: center;
 }
 
 .linksBox a {
-    font-size: .85rem;
-    color: white;
+    font-size: .6rem;
+    font-family: var(--mainFont);
+    letter-spacing: 2px;
+    color: var(--darkestGreen);
     text-shadow: 1px 1px 2px var(--shadow);
     text-align: center;
 }
@@ -429,6 +465,21 @@ hr {
 .langToolsFeats {
     margin: 25px 25px 0px 25px;
 }
+
+.language, .tool, .feature {
+    font-size: .7rem;
+    padding: 3px 7px;
+    margin: 2px 4px;
+    font-weight: 500;
+    box-shadow: 0px 0px 10px #00000035;
+    background-color: #fdfdfd;
+    color: var(--darkPink);
+    border-radius: 5px;
+}
+
+
+
+
 
 
 /* CONTACT PAGE STYLES */
@@ -552,7 +603,7 @@ footer {
 @media (min-width: 769px) {
     /* NAVBAR */
     .navbar {
-        margin-right: 200px;
+        margin-right: 100px;
         padding-bottom: 0;
     }
 
@@ -580,13 +631,14 @@ footer {
     .main {
         display: flex;
         flex-direction: row;
+        justify-content: space-between;
+        margin: 10px;
     }
     .top, .bottom {
-        width: 45%;
-        margin-right: 15px;
+        width: 48%;
     }
     .myPicture {
-        width: 100%;
+        width: 95%;
         height: auto;
     }
     .welcomeMsg {
@@ -599,6 +651,10 @@ footer {
     /* RESUME PAGE LAYOUT */
     .resume {
         padding: 50px;
+        font-size: .85rem;
+    }
+    .resume p {
+        font-size: .85rem;
     }
     .resumeEntry {
         display: flex;
@@ -608,13 +664,13 @@ footer {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        margin-bottom: 40px;
+        margin-bottom: 30px;
     }
     .skills div:first-of-type {
-        width: 30%;
+        width: 25%;
     }
     .skills div:last-of-type {
-        width: 70%;
+        width: 75%;
     }
     .skillsTitle {
         text-align: left;
@@ -636,18 +692,12 @@ footer {
     /* PROJECT VIEW STYLES */
     .top img {
         width: 100%;
+        margin: 25px 20px;
     }
 
-    .reflections {
-        padding-left: 25px;
-    }
-    
     .reflections ul li {
         font-size: .85rem;
-        padding-right: 75px;
     }
-
-
 
     .contactMe {
         margin: auto;
@@ -656,4 +706,10 @@ footer {
 
 
     
+}
+
+@media (min-width: 960px) {
+    .main {
+        margin: none;
+    }
 }

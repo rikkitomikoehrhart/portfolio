@@ -67,7 +67,7 @@ DESCRIPTION: This is the resume page for my portfolio website
                         <em>Awards & Honors</em>: Phi Theta Kappa Honors
                         Society, Secretary Fall 2024, Chair of the Outreach
                         Committee • Phi Theta Kappa - Alpha Gamma Pi Chapter 
-                        Scholarship Awardee • WIT (Women Informtion Technology)
+                        Scholarship Awardee • WIT (Women Information Technology)
                         Student Liaison, 2024-2025.  
                     </p>
                 </div>
@@ -158,7 +158,7 @@ DESCRIPTION: This is the resume page for my portfolio website
                     Organization <span class="dot">•</span> 
                     Problem Solving <span class="dot">•</span> 
                     Time Management <span class="dot">•</span> 
-                    Resourefulness
+                    Resourcefulness
                 </div>
             </div>
         </div>
@@ -177,7 +177,7 @@ DESCRIPTION: This is the resume page for my portfolio website
                 </div>
 
                 <div class="resumeEntry">
-                    <p><i>Administrative Assitant, Voice Over Artist</i></p>
+                    <p><i>Administrative Assistant, Voice Over Artist</i></p>
                     <p>Dec 2023 - Present</p>
                 </div>
                 
@@ -305,7 +305,7 @@ DESCRIPTION: This is the resume page for my portfolio website
 
         <!-- VOICE OVER WORK -->
         <div class="voiceOverSection">
-            <h2>VOICE OVER WORK EXAMPLES</h2>:
+            <h2>VOICE OVER WORK EXAMPLES:</h2>
     
             <div class="video">
                 <iframe src="https://www.youtube.com/embed/kQk0egTWZyo?si=JKNbD7uefL6ucNSs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>

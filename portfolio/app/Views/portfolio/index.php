@@ -1,6 +1,6 @@
 <!--
 AUTHOR: Rikki Tomiko Ehrhart (rikki.ehrhart@g.austincc.edu)
-LAST UPDATE: 12.19.2024
+LAST UPDATE: 01.16.2025
 
 FILE: portfolio/app/Views/portfolio/index.php
 DESCRIPTION: This is the Portfolio page view that shows the 
@@ -8,8 +8,6 @@ DESCRIPTION: This is the Portfolio page view that shows the
              website that is housed at rikkitomikoehrhart.com 
              and is also on Github
 -->
-<!-- LINK TO CSS FOR PORTFOLIO -->
-<link rel="stylesheet" href="/assets/css/portfolio.css">
 
 <div class="portfolio">
 
