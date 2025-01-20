@@ -1,7 +1,19 @@
 <?php
 
 return [
-    // DATABASE VARIABLES 
+    // CI Environment
+    'CI_ENVIRONMENT' => getenv('CI_ENVIRONMENT') ?: 'development',
+
+    
+    // DEVELOPMENT DATABASE VARIABLES 
+    'dHostname' => getenv('database.default.dHostname') ?: 'localhost',
+    'dUsername' => getenv('database.default.dUsername') ?: 'root',
+    'dPassword' => getenv('database.default.dPassword') ?: '',
+    'dDatabase' => getenv('database.default.dDatabase') ?: 'default_database',
+    'dDBDriver' => getenv('database.default.dDBDriver') ?: 'MySQLi',
+
+
+    // PRODUCTION DATABASE VARIABLES 
     'hostname' => getenv('database.default.hostname') ?: 'localhost',
     'username' => getenv('database.default.username') ?: 'root',
     'password' => getenv('database.default.password') ?: '',
