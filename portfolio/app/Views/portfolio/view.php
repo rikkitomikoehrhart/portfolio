@@ -12,13 +12,30 @@ DESCRIPTION: This is the Portfolio Project page view that
 <div class="portfolio">
 
     <div class="titleSection">
-        <h2><?= esc($project['name']) ?></h2>
+        <h2 class="projTitle"><?= esc($project['name']) ?></h2>
     </div>
     
     <div class="main">
         <!-- TOP ON MOBILE LEFT ON DESKTOP -->
         <div class="top">
-            <img src="/projects/<?= esc($project['id']) ?>/screenshot1.png">
+            <div class="imgGallery">
+                <div class="galleryControls">
+                    <button id="leftBtn"> < </button>
+                    <?php if (!empty($project['images'])) : ?>
+                        <img class="focusImg" id="focusImg" src="/projects/<?= esc($project['id']) ?>/<?= esc($project['images'][0]) ?>">
+                    <?php endif; ?>
+                    <button id="rightBtn"> > </button>
+                </div>
+                
+                <div class="galleryThumbnails">
+                    <?php if (!empty($project['images'])) : ?>
+                        <?php foreach ($project['images'] as $image): ?>
+                            <img class="thumbnailImg" src="/projects/<?= esc($project['id']) ?>/<?= esc($image) ?>">
+                        <?php endforeach; ?>
+                    <?php endif ?>
+                </div>
+            </div>
+            
         </div>
 
         <!-- BOTTOM ON MOBILE RIGHT ON DESKTOP -->
@@ -104,3 +121,8 @@ DESCRIPTION: This is the Portfolio Project page view that
     
 
 </div>
+
+
+
+<!-- LINK TO JAVASCRIPT -->
+<script src="/assets/js/gallery.js"></script>

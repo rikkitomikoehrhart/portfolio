@@ -6,6 +6,7 @@
 # Ignore CodeIgniter files
 /system/
 /writable/
+/portfolio/writable
 /vendor/
 /node_modules/
 .env
