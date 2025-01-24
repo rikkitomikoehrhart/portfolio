@@ -1,6 +1,6 @@
 <!--
 AUTHOR: Rikki Tomiko Ehrhart (rikki.ehrhart@g.austincc.edu)
-LAST UPDATE: 01.16.2025
+LAST UPDATE: 01.20.2025
 
 FILE: portfolio/app/Views/portfolio/view.php
 DESCRIPTION: This is the Portfolio Project page view that 
@@ -15,9 +15,9 @@ DESCRIPTION: This is the Portfolio Project page view that
         <h2 class="projTitle"><?= esc($project['name']) ?></h2>
     </div>
     
-    <div class="main">
+    <div class="view">
         <!-- TOP ON MOBILE LEFT ON DESKTOP -->
-        <div class="top">
+        <div class="topView">
             <div class="imgGallery">
                 <div class="galleryControls">
                     <button id="leftBtn"> < </button>
@@ -39,7 +39,7 @@ DESCRIPTION: This is the Portfolio Project page view that
         </div>
 
         <!-- BOTTOM ON MOBILE RIGHT ON DESKTOP -->
-        <div class="bottom">
+        <div class="bottomView">
             
             <!-- DESCRIPTION -->
             <div class="description">

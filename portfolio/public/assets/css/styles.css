@@ -181,12 +181,17 @@ p {
 
 .myPicture {
     border-radius: 100%;
-    width: 90vw;
+    width: 150vw;
     height: auto;
-    opacity: .8;
+    opacity: .4;
     box-shadow: 5px 5px 5px var(--shadow);
     transition: opacity 2s ease, box-shadow 2s ease;
     margin-left: 15px;
+    position: relative;
+    z-index: 1;
+    top: -40vh;
+    left: -15vh;
+    margin-bottom: -40vh;
 }
 
 .myPicture:hover {
@@ -199,7 +204,8 @@ p {
     margin: 0 0 25px 0;
     text-shadow: .5px .5px 1px var(--shadow);
     text-align: center;
-
+    position: relative;
+    z-index: 2;
 }
 
 .bold {
