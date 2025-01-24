@@ -696,6 +696,8 @@ footer {
     .myPicture {
         width: 95%;
         height: auto;
+        position: static;
+        opacity: .75;
     }
     .welcomeMsg {
         justify-content: right;

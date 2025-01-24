@@ -37,11 +37,12 @@ My portfolio site was built on VS Code, it uses CodeIgniter 4.5, and it is house
 The following is a mixture of my wish-list and todos of what I still want to accomplish with my portfolio.
 
 - [x] ~~Create a Contact page~~
-- [ ] Re-Style home page so that on mobile my picture is behind my name
+- [x] ~~Re-Style home page so that on mobile my picture is behind my name~~
 - [x] ~~Re-Style Resume page because on mobile some of the sections fall off the page~~
 - [ ] Add a filter to the Portfolio page so people can filter by programming language, tool, features, etc.
 - [ ] Add a search bar to the Portfolio page so people can search by name, description, language, tool, feature, etc.
 - [x] ~~Create a gallery feature on the individual product pages so that users can look through the screenshots.~~
+- [ ] Restyle Resume page and Contact to be more paper-like and flat. 
 - [ ] Add what I have learned to my portfolio entry in my database and to this readme!
 
 
