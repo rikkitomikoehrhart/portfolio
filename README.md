@@ -24,11 +24,11 @@ My portfolio site was built on VS Code, it uses CodeIgniter 4.5, and it is house
 ## Tools and Technologies
 | `LANGUAGES` |   `TOOLS`   |  `FEATURES`  |
 |:-----------:|:-----------:|:------------:|
-| HTML/CSS | VS Code | Responsive Design|
-| JavaScript | CodeIgniter | Drop Down Navigation Menu |
-| PHP | Figma | Dynamic Views |
-| MySQL | MVC | Contact Form |
-| | Github | |
+| HTML | VS Code | Responsive Design|
+| CSS | CodeIgniter | Drop Down Navigation Menu |
+| JavaScript | Figma | Dynamic Views |
+| PHP | MVC | Contact Form |
+| MySQL | Github | Image Gallery |
 | | Database | |
 
 
@@ -41,7 +41,7 @@ The following is a mixture of my wish-list and todos of what I still want to acc
 - [x] ~~Re-Style Resume page because on mobile some of the sections fall off the page~~
 - [ ] Add a filter to the Portfolio page so people can filter by programming language, tool, features, etc.
 - [ ] Add a search bar to the Portfolio page so people can search by name, description, language, tool, feature, etc.
-- [ ] Create a gallery feature on the individual product pages so that users can look through the screenshots.
+- [x] ~~Create a gallery feature on the individual product pages so that users can look through the screenshots.~~
 - [ ] Add what I have learned to my portfolio entry in my database and to this readme!
 
 
