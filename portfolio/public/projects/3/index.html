@@ -1,6 +1,6 @@
 <!--
 AUTHOR: Rikki Tomiko Ehrhart (rikki.ehrhart@g.austincc.edu)
-LAST UPDATE: 02.17.2025
+LAST UPDATE: 02.22.2025
 
 FILE: portfolio/public/projects/3/index.html
 DESCRIPTION: This is a project made on behalf of Lou DiSimone
@@ -28,7 +28,45 @@ DESCRIPTION: This is a project made on behalf of Lou DiSimone
     <script src="main.js" async></script>
 </head>
 <body>
+    <!-- NAV BAR -->
+    <nav>
+        <a href="index.html">
+            <img class="logo" src="images/logo.png">
+        </a>
 
 
-    
+        <div class="game-buttons">
+            <div id="reset-button">
+                <button>Reset</button>
+            </div>
+
+            <div id="submit-button">
+                <button>Submit</button>
+            </div>
+
+            <div id="leave-button">
+                <button>X</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- MAIN SECTION-->
+    <main>
+        <div class="title">
+            <h1>Which Princess Bride character are you?</h1>
+        </div>
+
+        <div id="err">
+            <!-- If the user presses submit before the last question
+             then an error populates here -->
+        </div>
+
+        <div class="quiz">
+            <!-- QUIZ GOES HERE -->
+        </div>
+
+
+    </main>
+
+
 </body>

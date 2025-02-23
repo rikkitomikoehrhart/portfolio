@@ -1,6 +1,6 @@
 /* 
 AUTHOR: Rikki Tomiko Ehrhart (rikki.ehrhart@g.austincc.edu) 
-LAST UPDATE: 02.17.2025 
+LAST UPDATE: 02.22.2025 
 
 FILE: portfolio/public/projects/3/styles.css
 DESCRIPTION: This is a project made on behalf of Lou DiSimone 
@@ -11,3 +11,105 @@ DESCRIPTION: This is a project made on behalf of Lou DiSimone
              website quiz that they can use at the next Phi 
              Theta Kappa conference (TRC 2025).
 */
+
+/* FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Meow+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Delius&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&display=swap');
+
+
+:root {
+    /* BRAND FONTS */
+    --fancy: "Meow Script", serif;
+    --title: "Delius", serif;
+    --main: "M PLUS Rounded 1c", serif;
+}
+
+
+
+/* BODY STYLES */
+body {
+    margin: 0;
+    padding: 0;
+
+    background-color: #cee5e5;
+    color: #3f5444;
+
+    font-family: var(--main);
+}
+
+html {
+    margin: 0;
+    padding: 0;
+}
+
+
+
+/* NAV STYLES */
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 15px;
+}
+
+.logo {
+    width: 150px;
+    height: auto;
+}
+
+.game-buttons {
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.game-buttons div button {
+    width: 150px;
+    height: 40px;
+    
+    background-color: rgba(254, 227, 121, 1);
+    color: #637605;
+    border: 1px solid rgba(203, 175, 65);
+    border-radius: 25px;
+    box-shadow: 3px 3px 10px #00000050;
+    text-shadow: 3px 3px 5px #00000025;
+
+    font-family: var(--title);
+    font-size: 1rem;
+    letter-spacing: 2px;
+
+    transition: box-shadow .25s ease;
+}
+
+.game-buttons div button:active {
+    box-shadow: none;
+}
+
+#leave-button button{
+    width: 75px;
+}
+
+/* MAIN STYLES */
+.title {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0;
+    padding-top: 0;
+}
+
+h1 {
+    font-family: var(--fancy);
+    text-align: center;
+    font-size: 3.5rem;
+    text-shadow: 2px 2px 2px #00000050;
+    padding: 0px 100px 0px 100px;
+    margin-top: -50px;
+
+}
+
