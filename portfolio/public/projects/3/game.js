@@ -1,6 +1,6 @@
 /*
 AUTHOR: Rikki Tomiko Ehrhart (rikki.ehrhart@g.austincc.edu)
-LAST UPDATE: 02.22.2025
+LAST UPDATE: 02.23.2025
 
 FILE: portfolio/public/projects/3/game.js
 DESCRIPTION: This is a project made on behalf of Lou DiSimone
@@ -223,22 +223,83 @@ class Game {
 
     /* GAMEPLAY FUNCTIONALITY */
     returnWinner() {
-        Object.keys(this.answers).forEach(function(key) {
-            if (this.answers[key] > this.winningTotal) {
-                this.winner = key;
-                this.winningTotal = this.answers[key];
-            } else if (this.answers[key] == this.winningTotal && this.winningTotal != 0) {
-                var coinFlip = Math.floor(Math.random() * 2)+1;
+    let maxCount = 0;
+    let potentialWinners = [];
 
-                if (coinFlip == 2) {
-                    this.winner = key;
-                    this.winningTotal = this.answers[key];
-                }
-            }
-        });
-
-        return this.winner;
+    for (let key in this.answers) {
+        if (this.answers[key] > maxCount) {
+            maxCount = this.answers[key];
+            potentialWinners = [key]; 
+        } else if (this.answers[key] === maxCount && maxCount !== 0) {
+            potentialWinners.push(key); 
+        }
     }
 
+    // If there's a tie, randomly select one from the potential winners
+    this.winner = potentialWinners[Math.floor(Math.random() * potentialWinners.length)];
+    
+    return this.winner;
+    }
+
+    winnerInfo() {
+        var winner = this.returnWinner();
+
+        var info = [];
+
+        switch(winner) {
+            case "a":
+                info.push("Westley (The Man in Black)");
+                info.push("Brace, romantic and clever. You'll do anything for love.");
+                info.push("westley.png");
+                break;
+            case "b":
+                info.push("Vizzini");
+                info.push("Sharp-witted and confident. You always think you’re the smartest person around.");
+                info.push("vizzini.png");
+                break;
+            case "c":
+                info.push("Fezzik");
+                info.push("Kind-hearted and strong. A loyal friend who stands by those you care about.");
+                info.push("fezzik.png");
+                break;
+            case "d":
+                info.push("Inigo Montoya");
+                info.push("Passionate and determined. You never forget your purpose.");
+                info.push("inigo.png");
+                break;
+            case "e":
+                info.push("Prince Humperdinck");
+                info.push("Ambitious and power-hungry. You crave control and victory.");
+                info.push("humperdinck.png");
+                break;
+            case "f":
+                info.push("Miracle Max");
+                info.push("Resourceful and sarcastic. You help people—reluctantly, but with skill.");
+                info.push("max.png");
+                break;
+            case "g":
+                info.push("Count Rugen (The Six-Fingered Man)");
+                info.push("Ruthless and calculating. You get what you want, no matter the cost.");
+                info.push("rugen.png");
+                break;
+            case "h":
+                info.push("The Grandfather (Narrator)");
+                info.push("Wise and patient. You believe in the power of a good story.");
+                info.push("grandfather.png");
+                break;
+            case "i":
+                info.push("The Clergyman");
+                info.push("Light-hearted and formal. You bring people together… even if you fumble the delivery.");
+                info.push("clergyman.png");
+                break;
+            default:
+                info.push("Buttercup");
+                info.push("Resilient and hopeful. You endure hardships and never give up on love.");
+                info.push("buttercup.png");
+                break;
+        }
+
+        return info;
+    }
 
 }

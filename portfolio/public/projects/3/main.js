@@ -1,6 +1,6 @@
 /*
 AUTHOR: Rikki Tomiko Ehrhart (rikki.ehrhart@g.austincc.edu)
-LAST UPDATE: 02.22.2025
+LAST UPDATE: 02.23.2025
 
 FILE: portfolio/public/projects/3/main.js
 DESCRIPTION: This is a project made on behalf of Lou DiSimone
@@ -12,42 +12,24 @@ DESCRIPTION: This is a project made on behalf of Lou DiSimone
              Theta Kappa conference (TRC 2025).
 */
 
+
 window.onload = (event) => {
     // Create a new Game
     var game = new Game;
 
-    // On click for Submit Button
-    document.getElementById('submit-button').addEventListener('click', function() {
-
-        // If there aren't a total of 10 answers, then they haven't
-        // answered every question, so product and error
-        if (game.getTotalAnswers() < 10) {
-            returnError();
-
-        // If there is 10 answers, then they have answered every 
-        // question, so produce the result
-        } else {
-            showResult();
-        }
-    })
-
-    //
-
-
-
-
+    // Start game
+    playGame(game, 1);
 
 }
 
 
 
 /* ERROR FUNCTIONS */
-function returnError() {
+function returnError(msg) {
     document.getElementById('err').innerHTML = `
-        <p>ERROR: Please answer every question in the quiz before clicking submit.</p>
+        <p>ERROR: ${msg}</p>
     `
 }
-
 function clearError() {
     document.getElementById('err').innerHTML = ``;
 }
@@ -55,8 +37,169 @@ function clearError() {
 
 
 
+/* GAMEPLAY FUNCTIONS */
+function playGame(game, question) {
+    var playing = true; 
+
+    // While question is less than 10, populate the question, 
+    // one at a time until the last question is populated
+    while (playing) {
+        playing = false;
+        if (question <= 10) {
+            // Populate the question HTML
+            populateQuestion(game, question)
+
+            // create a value to hold the current selected answer
+            // and grab the current selection
+            var currentSelection;
+            var choices = document.getElementsByClassName('choice');
+            for (var i = 0; i < choices.length; i++) {
+                choices[i].addEventListener('change', function() {
+                    currentSelection = this.id;
+
+                })
+            }
+
+
+
+            // Listen for the next button
+            document.getElementById('next').addEventListener('click', function() {
+                // Check if there has been a selection
+                if (!currentSelection) {
+                    returnError("Please make a selection first.");
+                } else {
+                    // Clear error if needed
+                    clearError();
+
+                    // save current selection
+                    game.increaseLetterTotal(currentSelection);
+
+
+                    // check if the game is won
+                    if (game.getTotalAnswers() < 10) {
+                        // game isn't won yet
+
+                        
+                        document.getElementById('quiz').innerHTML = ``;
+                        // populate the next question
+                        question++;
+                        playGame(game, question)
+                    } else {
+                        // Clear quiz area
+                        document.getElementById('quiz').innerHTML = ``
+
+                        showResult(game);
+                    }
+                }
+
+            })
+
+        } else {
+            // question is more than 10
+            playing = false;
+        }
+
+    }
+
+}
+function populateQuestion(game, num) {
+    // get the question
+    var questionTxt = game.questions[num]["question"];
+
+    // get the answers
+    var choicesArr = game.questions[num]["choices"];
+
+    // Create the HTML elements for container and question
+    var container = document.createElement('div');
+    var question = document.createElement('h3');
+    var choicesContainer = document.createElement('div');
+
+    // Assign classes and ids
+    container.id = "container"
+    container.classList.add("questionContainer")
+    choicesContainer.classList.add("choicesContainer")
+
+
+
+    // Fill question
+    question.innerHTML = `${num}. ${questionTxt}`;
+
+    // Populate choices
+    for (let letter in choicesArr) {
+        var option = document.createElement('div');
+        var choice = document.createElement('input');
+
+        // adjust input settings
+        choice.type = "radio";
+        choice.name = num;
+        choice.value = choicesArr[letter];
+        choice.id = letter;
+
+        choice.classList.add("choice");
+
+        var label = document.createElement("label");
+        label.textContent = `${letter}. ${choicesArr[letter]}`;
+
+
+        option.appendChild(choice);
+        option.appendChild(label);
+
+        option.classList.add('option');
+        choicesContainer.appendChild(option);
+    }
+
+
+    // Create Next button
+    var button = document.createElement('button');
+    button.id = "next";
+
+    if (num == 10) {
+        button.textContent = "Submit";
+    } else {
+        button.textContent = "Next Question";
+    }
+    
+
+
+
+
+    // Populate the container
+    container.appendChild(question);
+    container.appendChild(choicesContainer);
+    container.appendChild(button);
+    document.getElementById('quiz').appendChild(container);
+    
+}
+
+
 
 /* RESULTS FUNCTIONS */
-function showResult() {
-    // functionality will go here.
+function showResult(game) {
+    // Get the winner's info.
+    var winner = game.winnerInfo();
+
+    // grab the quiz html element
+    var container = document.getElementById('quiz');
+
+    // Clear the title
+    document.getElementById('gameTitle').innerHTML = ``;
+
+    // Create html elements
+    var winnerTitle = document.createElement('h2');
+    var winnerImg = document.createElement('img');
+    var winnerDesc = document.createElement('p');
+
+    // Fill out the html elements
+    winnerTitle.textContent = winner[0];
+    winnerImg.src = `images/${winner[2]}`;
+    winnerDesc.textContent = winner[1];
+
+    
+    // add html elements to the container
+    container.appendChild(winnerTitle);
+    container.appendChild(winnerDesc);
+    container.appendChild(winnerImg);
+    
+
+    container.classList.add("winner")
 }
