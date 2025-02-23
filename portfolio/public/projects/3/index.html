@@ -25,6 +25,7 @@ DESCRIPTION: This is a project made on behalf of Lou DiSimone
     <link href="styles.css" rel="stylesheet" />
  
     <!-- JAVASCRIPT -->
+    <script src="game.js" async></script>
     <script src="main.js" async></script>
 </head>
 <body>
@@ -37,7 +38,9 @@ DESCRIPTION: This is a project made on behalf of Lou DiSimone
 
         <div class="game-buttons">
             <div id="reset-button">
-                <button>Reset</button>
+                <a href="index.html">
+                    <button>Reset</button>
+                </a>
             </div>
 
             <div id="submit-button">
@@ -45,7 +48,9 @@ DESCRIPTION: This is a project made on behalf of Lou DiSimone
             </div>
 
             <div id="leave-button">
-                <button>X</button>
+                <a href="https://www.rikkitomikoehrhart.com/portfolio/view/3">
+                    <button>X</button>
+                </a>
             </div>
         </div>
     </nav>
@@ -61,7 +66,7 @@ DESCRIPTION: This is a project made on behalf of Lou DiSimone
              then an error populates here -->
         </div>
 
-        <div class="quiz">
+        <div id="quiz" class="hidden">
             <!-- QUIZ GOES HERE -->
         </div>
 

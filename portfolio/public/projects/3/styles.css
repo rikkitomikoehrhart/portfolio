@@ -113,3 +113,11 @@ h1 {
 
 }
 
+
+/* QUIZ STYLES */
+
+#err {
+    color: red;
+    text-align: center;
+    margin-top: -50px;
+}
