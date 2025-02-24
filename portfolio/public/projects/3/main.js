@@ -106,8 +106,10 @@ function populateQuestion(game, num) {
     // get the question
     var questionTxt = game.questions[num]["question"];
 
-    // get the answers
+    // get the answers, and shuffle them
     var choicesArr = game.questions[num]["choices"];
+    choicesArr = shuffle(choicesArr);
+    console.log(choicesArr)
 
     // Create the HTML elements for container and question
     var container = document.createElement('div');
@@ -120,9 +122,9 @@ function populateQuestion(game, num) {
     choicesContainer.classList.add("choicesContainer")
 
 
-
     // Fill question
     question.innerHTML = `${num}. ${questionTxt}`;
+
 
     // Populate choices
     for (let letter in choicesArr) {
@@ -138,7 +140,7 @@ function populateQuestion(game, num) {
         choice.classList.add("choice");
 
         var label = document.createElement("label");
-        label.textContent = `${letter}. ${choicesArr[letter]}`;
+        label.textContent = `${choicesArr[letter]}`;
 
 
         option.appendChild(choice);
@@ -202,4 +204,21 @@ function showResult(game) {
     
 
     container.classList.add("winner")
+}
+
+
+/* MISC FUNCTION */
+function shuffle(array) {
+
+    const elements = Object.entries(array);
+  
+    for (let i = elements.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [elements[i], elements[j]] = [elements[j], elements[i]];
+    }
+
+    return Object.fromEntries(elements);
+
+
+    
 }

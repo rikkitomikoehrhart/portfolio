@@ -34,7 +34,7 @@ class Game {
             "2": {
                 "question": "What motivates you the most?", 
                 "choices": {
-                    "a": "True love.",
+                    "a": "Protecting the one I love, no matter what.",
                     "b": "Outsmarting others.",
                     "c": "Protecting my friends.",
                     "d": "Righting a terrible wrong.",
@@ -43,7 +43,7 @@ class Game {
                     "g": "Perfecting my sinister plans",
                     "h": "Sharing a good story.",
                     "i": "Officiating important moments",
-                    "j": "Also true love.",
+                    "j": "Holding onto love, even through hardships.",
                 }
             },
             "3": {
@@ -249,7 +249,7 @@ class Game {
         switch(winner) {
             case "a":
                 info.push("Westley (The Man in Black)");
-                info.push("Brace, romantic and clever. You'll do anything for love.");
+                info.push("Brave, romantic and clever. You'll do anything for love.");
                 info.push("westley.png");
                 break;
             case "b":
