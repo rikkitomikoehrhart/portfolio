@@ -236,6 +236,10 @@ p {
     padding-bottom: 30px;
 }
 
+.contactInfo {
+    text-align: center;
+}
+
 .resume h2, .resume p {
     color: var(--darkestGreen);
 }
@@ -243,22 +247,19 @@ p {
 .resume h2 {
     padding: 10px 0;
     font-size: 2rem;
+    text-shadow: 2px 2px 1px #00000025;
 }
 
 
-.headerSection p:first-of-type {
-    text-align: center;
+.headerSection p {
+    text-align: left;
     padding-bottom: 10px;
     font-size: 1rem;
-    display: flex;
-    flex-direction: column;
+    display: inline;
 }
 
-.headerSection p:first-of-type .dot {
-    display: none;
-}
 
-.headerSection p:first-of-type a {
+.headerSection p a {
     font-family: var(--mainFont);
     font-size: .9rem
 }
@@ -291,7 +292,6 @@ hr {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    margin-bottom: 15px;
 }
 
 .resumeCard .resumeEntry:first-of-type {
@@ -314,6 +314,10 @@ hr {
 .resumeCard ul {
     margin-bottom: 10px;
     margin-left: 15px;
+}
+
+.video {
+    margin: 10px 30px 10px 0px
 }
 
 
@@ -732,6 +736,11 @@ footer {
     }
     .skillsTitle {
         text-align: left;
+    }
+
+    .videosContainer {
+        display: flex;
+        flex-direction: row;
     }
 
     /* PORTFOLIO STYLES */
