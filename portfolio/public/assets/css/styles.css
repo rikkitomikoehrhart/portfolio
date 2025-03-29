@@ -176,28 +176,22 @@ p {
     gap: 1rem;
     align-items: center;
     justify-content: center;
+    z-index: 5;
 }
 
 
 .myPicture {
     border-radius: 100%;
-    width: 150vw;
-    height: auto;
     opacity: .4;
-    box-shadow: 5px 5px 5px var(--shadow);
-    transition: opacity 2s ease, box-shadow 2s ease;
+    width: 100vw;
+    height: auto;
     margin-left: 15px;
     position: relative;
     z-index: 1;
-    top: -40vh;
-    left: -15vh;
+    top: -60vh;
     margin-bottom: -40vh;
 }
 
-.myPicture:hover {
-    opacity: 1;
-    box-shadow: 7px 7px 7px var(--darkPink);
-}
 
 .welcomeSummary {
     font-size: 1.25rem;
@@ -701,7 +695,7 @@ footer {
         width: 95%;
         height: auto;
         position: static;
-        opacity: .75;
+        opacity: 1;
     }
     .welcomeMsg {
         justify-content: right;
