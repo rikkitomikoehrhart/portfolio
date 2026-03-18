@@ -1,4 +1,3 @@
-// src/components/organisms/Navbar.jsx
 import { useState, useEffect } from 'react';
 import Logo from './navbar/Logo';
 import NavLinks from './navbar/NavLinks';

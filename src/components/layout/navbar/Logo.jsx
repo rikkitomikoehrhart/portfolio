@@ -1,4 +1,3 @@
-// src/components/atoms/Logo.jsx
 import { Link } from 'react-router-dom'
 
 function Logo() {

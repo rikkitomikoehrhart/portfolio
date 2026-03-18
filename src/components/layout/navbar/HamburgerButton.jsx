@@ -1,4 +1,3 @@
-// src/components/molecules/HamburgerButton.jsx
 import HamburgerBar from "./HamburgerBar";
 
 function HamburgerButton({ isOpen, onToggle }) {

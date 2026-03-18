@@ -1,4 +1,3 @@
-// src/components/atoms/NavItem.jsx
 import { NavLink } from 'react-router-dom'
 
 function NavItem({ to, label, onClick, mobile = false }) {

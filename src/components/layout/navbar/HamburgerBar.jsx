@@ -1,5 +1,3 @@
-// src/components/atoms/HamburgerBar.jsx
-
 function HamburgerBar({ style = {} }) {
   return (
     <span style={{ ...styles.bar, ...style }} />

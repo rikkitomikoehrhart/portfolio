@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Navbar from './components/layout/Navbar';
-// import Footer from './components/layout/Footer'
+import Footer from './components/layout/Footer'
 // import Home from './pages/Home'
 // import Resume from './pages/Resume'
 // import Portfolio from './pages/Portfolio'
@@ -9,8 +9,10 @@ import Navbar from './components/layout/Navbar';
 
 export default function App() {
   return (
-    <Navbar />
-
+    <>
+      <Navbar />
+      <Footer />
+    </>
     // <BrowserRouter>
     //   <Navbar />
     //   {/* <main>
