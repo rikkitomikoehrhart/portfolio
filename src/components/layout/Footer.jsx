@@ -2,7 +2,7 @@ import FooterDivider from '../layout/footer/FooterDivider'
 import FooterBrand from '../layout/footer/FooterBrand'
 import FooterLinks from '../layout/footer/FooterLinks';
 
-export default function Footer() {
+function Footer() {
   const year = new Date().getFullYear()
 
   return (
@@ -44,3 +44,5 @@ const styles = {
     textAlign: 'center',
   },
 }
+
+export default Footer;

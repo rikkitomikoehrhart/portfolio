@@ -1,9 +1,13 @@
-import React from "react";
-
+import Heroine from '../components/home/Heroine';
+import AboutBlurb from '../components/home/AboutBlurb';
+ 
 function Home() {
-    return (
-        <h1>Home</h1>
-    )
+  return (
+    <>
+      <Heroine />
+      <AboutBlurb />
+    </>
+  )
 }
 
 export default Home;
