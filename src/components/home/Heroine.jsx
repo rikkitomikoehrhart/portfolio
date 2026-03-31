@@ -1,34 +1,18 @@
 import HeroineText from './HeroineText';
 import HeroinePhoto from './HeroinePhoto';
- 
+import styles from '../../styles/home.module.css';
+
 function Heroine() {
   return (
-    <section style={styles.hero}>
-      <div style={styles.left}>
+    <section className={styles.hero}>
+      <div className={styles.heroLeft}>
         <HeroineText />
       </div>
-      <div style={styles.right}>
+      <div className={styles.heroRight}>
         <HeroinePhoto />
       </div>
     </section>
   )
-}
- 
-const styles = {
-  hero: {
-    display: 'grid',
-    gridTemplateColumns: '1fr 1fr',
-    minHeight: '88vh',
-  },
-  left: {
-    display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'center',
-  },
-  right: {
-    display: 'flex',
-    flexDirection: 'column',
-  },
 }
 
 export default Heroine;

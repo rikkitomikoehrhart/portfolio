@@ -1,4 +1,5 @@
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
+import styles from '../../../styles/layout.module.css';
 
 function FooterLink({ to, label, external = false }) {
   if (external) {
@@ -7,7 +8,7 @@ function FooterLink({ to, label, external = false }) {
         href={to}
         target="_blank"
         rel="noopener noreferrer"
-        style={styles.link}
+        className={styles.footerLink}
       >
         {label}
       </a>
@@ -15,22 +16,10 @@ function FooterLink({ to, label, external = false }) {
   }
 
   return (
-    <Link to={to} style={styles.link}>
+    <Link to={to} className={styles.footerLink}>
       {label}
     </Link>
   )
-}
-
-const styles = {
-  link: {
-    fontFamily: 'var(--font-sans)',
-    fontSize: '11px',
-    letterSpacing: '0.15em',
-    textTransform: 'uppercase',
-    color: 'var(--color-text-muted)',
-    textDecoration: 'none',
-    transition: 'color 0.2s ease',
-  },
 }
 
 export default FooterLink;

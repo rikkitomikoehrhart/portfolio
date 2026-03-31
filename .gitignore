@@ -195,3 +195,4 @@ deploy.sh
 *.backup
 *.patch
 .sass-cache/
+.claude/

@@ -1,48 +1,28 @@
-import FooterDivider from '../layout/footer/FooterDivider'
-import FooterBrand from '../layout/footer/FooterBrand'
+import FooterBrand from '../layout/footer/FooterBrand';
 import FooterLinks from '../layout/footer/FooterLinks';
+import styles from '../../styles/layout.module.css';
 
 function Footer() {
   const year = new Date().getFullYear()
 
   return (
-    <footer style={styles.footer}>
-      <FooterDivider />
+    <footer className={styles.footer}>
+      {/* Decorative divider */}
+      <div className={styles.dividerWrapper}>
+        <div className={styles.dividerLine} />
+        <div className={styles.dividerDiamond} />
+        <div className={styles.dividerLine} />
+      </div>
 
-      <div style={styles.inner}>
+      <div className={styles.footerInner}>
         <FooterLinks />
         <FooterBrand />
-        <p style={styles.copyright}>
+        <p className={styles.copyright}>
           &copy; {year} Rikki Tomiko Ehrhart. All rights reserved.
         </p>
       </div>
     </footer>
   )
-}
-
-const styles = {
-  footer: {
-    background: 'var(--color-bg)',
-    padding: '40px 48px 32px',
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
-    gap: '28px',
-  },
-  inner: {
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
-    gap: '20px',
-    width: '100%',
-  },
-  copyright: {
-    fontFamily: 'var(--font-sans)',
-    fontSize: '10px',
-    letterSpacing: '0.1em',
-    color: 'var(--color-accent-muted)',
-    textAlign: 'center',
-  },
 }
 
 export default Footer;

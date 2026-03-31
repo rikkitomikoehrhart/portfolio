@@ -1,60 +1,30 @@
-import { Link } from 'react-router-dom'
- 
+import { Link } from 'react-router-dom';
+import styles from '../../styles/ui.module.css';
+
 function Button({ children, to, href, variant = 'primary', onClick }) {
-  const style = variant === 'primary' ? styles.primary : styles.ghost
- 
-  // External link
+  const className = variant === 'primary' ? styles.btnPrimary : styles.btnGhost
+
   if (href) {
     return (
-      <a href={href} target="_blank" rel="noopener noreferrer" style={style}>
+      <a href={href} target="_blank" rel="noopener noreferrer" className={className}>
         {children}
       </a>
     )
   }
- 
-  // Internal route
+
   if (to) {
     return (
-      <Link to={to} style={style}>
+      <Link to={to} className={className}>
         {children}
       </Link>
     )
   }
- 
-  // Plain button
+
   return (
-    <button onClick={onClick} style={style}>
+    <button onClick={onClick} className={className}>
       {children}
     </button>
   )
-}
- 
-const base = {
-  fontFamily: 'var(--font-sans)',
-  fontSize: '12px',
-  letterSpacing: '0.12em',
-  textTransform: 'uppercase',
-  fontWeight: 500,
-  padding: '13px 28px',
-  textDecoration: 'none',
-  display: 'inline-block',
-  cursor: 'pointer',
-  border: 'none',
-  transition: 'opacity 0.2s ease',
-}
- 
-const styles = {
-  primary: {
-    ...base,
-    background: 'var(--color-accent)',
-    color: '#fff',
-  },
-  ghost: {
-    ...base,
-    background: 'none',
-    color: 'var(--color-text)',
-    border: '0.5px solid var(--color-accent-muted)',
-  },
 }
 
 export default Button;

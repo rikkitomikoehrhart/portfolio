@@ -1,41 +1,17 @@
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
+import styles from '../../../styles/layout.module.css';
 
 function FooterBrand() {
   return (
-    <div style={styles.wrapper}>
-      <Link to="/" style={styles.logo}>
+    <div className={styles.brandWrapper}>
+      <Link to="/" className={styles.brandLogo}>
         rte.
       </Link>
-      <p style={styles.tagline}>
+      <p className={styles.brandTagline}>
         Built with React &amp; MySQL · Hosted on Dreamhost
       </p>
     </div>
   )
-}
-
-const styles = {
-  wrapper: {
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
-    gap: '8px',
-  },
-  logo: {
-    fontFamily: 'var(--font-serif)',
-    fontSize: '22px',
-    fontStyle: 'italic',
-    fontWeight: 300,
-    color: 'var(--color-accent-muted)',
-    textDecoration: 'none',
-    letterSpacing: '0.05em',
-  },
-  tagline: {
-    fontFamily: 'var(--font-sans)',
-    fontSize: '10px',
-    letterSpacing: '0.12em',
-    color: 'var(--color-accent-muted)',
-    textAlign: 'center',
-  },
 }
 
 export default FooterBrand;

@@ -1,17 +1,11 @@
-import NavItem from "./NavItem";
-
-const links = [
-  { to: '/',          label: 'Home'    },
-  { to: '/portfolio', label: 'Work'    },
-  { to: '/resume',    label: 'Résumé'  },
-  { to: '/contact',   label: 'Contact' },
-]
+import NavItem from './NavItem';
+import { navLinks } from '../../../data/navigation';
+import styles from '../../../styles/layout.module.css';
 
 function NavLinks({ mobile = false, onNavigate }) {
-
   return (
-    <ul style={mobile ? styles.mobileList : styles.desktopList}>
-      {links.map(({ to, label }) => (
+    <ul className={mobile ? styles.mobileList : styles.desktopList}>
+      {navLinks.map(({ to, label }) => (
         <NavItem
           key={to}
           to={to}
@@ -22,21 +16,6 @@ function NavLinks({ mobile = false, onNavigate }) {
       ))}
     </ul>
   )
-}
-
-const styles = {
-  desktopList: {
-    display: 'flex',
-    gap: '36px',
-    listStyle: 'none',
-    margin: 0,
-    padding: 0,
-  },
-  mobileList: {
-    listStyle: 'none',
-    margin: 0,
-    padding: '12px 0 20px',
-  },
 }
 
 export default NavLinks;
