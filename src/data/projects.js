@@ -1,0 +1,32 @@
+export const projects = [
+  {
+    id: '001',
+    title: 'Portfolio',
+    category: 'Website',
+    description: 'This project is a portfolio to showcase web programming and software engineer skills.',
+    image: '/images/projects/project-001/001.png',
+    tags: ['React', 'JavaScript', 'CSS'],
+    github: 'https://github.com/rikkitomikoehrhart',
+    live: '',
+  },
+  {
+    id: '002',
+    title: 'Aspire Real Estate Solutions, LLC.',
+    category: 'Squarespace Site',
+    description: 'I was hired by Aspire to quickly design and publish their website which included an IDX integration.',
+    image: '/images/projects/project-002/001.png',
+    tags: ['Squarespace', 'HTML/CSS', 'JavaScript', 'IDX'],
+    github: 'https://github.com/rikkitomikoehrhart',
+    live: 'http://www.aspire-realty.com',
+  },
+  {
+    id: '003',
+    title: 'Princess Bride Personality Quiz',
+    category: 'Mini Project',
+    description: 'This project was made on behalf of the Phi Theta Kappa Chapter Alpha Gamma Pi President for the Spring 2025 Semester. He requested this quiz that they can use at the TRC 2025 Phi Theta Kappa Conference.',
+    image: '/images/projects/project-003/001.png',
+    tags: ['HTML/CSS', 'JavaScript', 'Canva'],
+    github: 'https://github.com/rikkitomikoehrhart',
+    live: '',
+  },
+]
