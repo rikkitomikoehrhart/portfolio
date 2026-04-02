@@ -5,11 +5,11 @@ export const techTags = [
 ]
 
 export const funFacts = [
-  '🏆 Chancellor Student Achievement Award Recipient',
+  '💳 Apprentice Software Engineer @ Visa',
   '🥤 Fueled by Diet Coke',
   '🛒 10+ years in retail & food',
-  '💳 Apprentice Software Engineer @ Visa',
   '🦇 Based in Austin, TX',
+  '🏆 Chancellor Student Achievement Award Recipient',
   '🐉 Dungeons and Dragons Player',
   '🏀 WNBA Fan',
   '🍎 Fruit Enthusiast',

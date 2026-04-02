@@ -6,7 +6,7 @@ export const experience = [
     date: '2025 – Present',
     bullets: [
       'Work on the CRM team building and maintaining Microsoft Dynamics and Power Apps solutions — editing fields, forms, and views.',
-      'Co-developing the Data Retrieval Agent with my mentor: an application that allows developers to query databases using plain English, returning appropriate SQL queries and results.',
+      '2026 Visa Hackathon with my mentor\'s project: the Data Retrieval Agent, an application that allows developers to query databases using plain English, returning appropriate SQL queries and results.',
     ],
   },
   {

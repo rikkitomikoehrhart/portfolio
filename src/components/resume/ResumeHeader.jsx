@@ -8,7 +8,7 @@ function ResumeHeader() {
           Rikki <em className={styles.headerNameEm}>Tomiko</em> Ehrhart
         </h1>
         <p className={styles.headerTagline}>
-          Software Engineering Apprentice · Creative Developer · Austin, TX
+          Software Engineering Apprentice · Austin, TX
         </p>
       </div>
       <div className={styles.headerRight}>
