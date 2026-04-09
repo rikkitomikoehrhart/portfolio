@@ -3,13 +3,14 @@ import Tag from '../ui/Tag';
 import SectionLabel from '../ui/SectionLabel';
 import styles from '../../styles/portfolio.module.css';
 
+
 function ProjectCard({ project }) {
   return (
-    <Link to={`/portfolio/${project.id}`} className={styles.card}>
+    <Link to={`/portfolio/${project.slug}`} className={styles.card}>
       <div className={styles.imageWrapper}>
-        {project.image ? (
+        {project.thumbnail_url ? (
           <img
-            src={project.image}
+            src={project.thumbnail_url}
             alt={project.title}
             className={styles.image}
           />
@@ -24,14 +25,21 @@ function ProjectCard({ project }) {
         )}
       </div>
       <div className={styles.body}>
-        <SectionLabel>{project.category}</SectionLabel>
+        <SectionLabel>{project.type}</SectionLabel>
         <h2 className={styles.cardTitle}>{project.title}</h2>
-        <p className={styles.cardDesc}>{project.description}</p>
+        <p className={styles.cardDesc}>{project.short_description}</p>
+        {project.tech_stack.length > 0 && (
+          <div className={styles.tags}>
+            {project.tech_stack.map(tag => (
+              <Tag key={tag}>{tag}</Tag>
+            ))}
+          </div>
+        )}
         {project.tags.length > 0 && (
           <div className={styles.tags}>
             {project.tags.map(tag => (
               <Tag key={tag}>{tag}</Tag>
-            ))}
+        ))}
           </div>
         )}
       </div>

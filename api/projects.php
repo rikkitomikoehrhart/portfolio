@@ -51,7 +51,7 @@ try {
             : [];
     }
 
-    echo json_encode($projects);
+    echo json_encode($projects, JSON_UNESCAPED_SLASHES);
 
 } catch (PDOException $e) {
     http_response_code(500);
