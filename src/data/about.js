@@ -5,7 +5,7 @@ export const techTags = [
 ]
 
 export const funFacts = [
-  '💳 Apprentice Software Engineer @ Visa',
+  '👩‍💻 Apprentice Software Engineer',
   '🥤 Fueled by Diet Coke',
   '🛒 10+ years in retail & food',
   '🦇 Based in Austin, TX',

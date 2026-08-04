@@ -7,6 +7,19 @@ function ResumeEducation() {
       <div className={styles.eduHeader}>
         <div>
           <p className={styles.degree}>
+            B.A.S. Software Development
+          </p>
+          <p className={styles.certs}>
+            Currently enrolled
+          </p>
+          <p className={styles.school}>Austin Community College · Austin, TX</p>
+        </div>
+        <p className={styles.eduDate}>May 2029</p>
+      </div>
+
+      <div className={styles.eduHeader}>
+        <div>
+          <p className={styles.degree}>
             A.A.S. Web Programming
           </p>
           <p className={styles.certs}>
@@ -27,6 +40,19 @@ function ResumeEducation() {
           <li className={styles.honorsItem}>WIT "Grab A Byte" Lead Instructor</li>
           <li className={styles.honorsItem}>Member, ACC Web Advisory Committee</li>
         </ul>
+      </div>
+
+      <div className={styles.eduHeader}>
+        <div>
+          <p className={styles.degree}>
+            B.A. Theater
+          </p>
+          <p className={styles.certs}>
+            Acting/Directing Focus
+          </p>
+          <p className={styles.school}>Texas A&M University-Corpus Christi · Corpus Christ, TX</p>
+        </div>
+        <p className={styles.eduDate}>May 2009</p>
       </div>
     </ResumeSection>
   )

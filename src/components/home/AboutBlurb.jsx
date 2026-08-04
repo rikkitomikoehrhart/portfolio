@@ -35,7 +35,7 @@ function AboutBlurb() {
           </p>
 
           <p className={styles.aboutBody}>
-            Now I'm a Software Engineer Apprentice at Visa on the CRM team,
+            Now I've completed a Software Engineer Apprenticeship at Visa on the CRM team,
             working in Microsoft Dynamics and Power Apps and in the Software
             Developers Bachelors Program at Austin Community College. I'm
             just getting started!
@@ -67,7 +67,7 @@ function AboutBlurb() {
           <div className={styles.quote}>
             <p className={styles.quoteText}>
               "That brain of mine is something more <br />
-              than merely moral; as time will show." <br />
+              than merely mortal; as time will show." <br />
               - Ada Lovelace
             </p>
           </div>

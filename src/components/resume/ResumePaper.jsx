@@ -14,12 +14,15 @@ function ResumePaper() {
 
       {/* Summary */}
       <p className={styles.summary}>
-        Software engineering apprentice with a non-traditional background and a
-        proven track record of excellence. After 10+ years in retail and food
-        service, I returned to school and graduated as Austin Community College's
-        Chancellor's Student Achievement Award Recipient (May 2025). Now building
-        CRM solutions and AI-powered tooling at Visa, I bring adaptability,
-        people skills, and a genuine love of building things to every project.
+        <b>Software engineering apprentice</b> with hands-on experience developing 
+        software within a Microsoft Dynamics 365 environtment at Visa. 
+        <br />
+        <br />
+        Recipient of <em>Austin Community College's</em> prestigious <em>Chancello's
+        Student Achievement Award</em>, currently pursuing a <b>Bachelor of Applied 
+        Science in Software Development</b>. Strong foundation in frontend development 
+        and Python. Seeking early career software engineering roles to <em>grow</em> as 
+        a hands-on developer.
       </p>
 
       {/* Two column body */}

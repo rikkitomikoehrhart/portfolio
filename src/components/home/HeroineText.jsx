@@ -5,7 +5,7 @@ import styles from '../../styles/home.module.css';
 function HeroText() {
   return (
     <div className={styles.heroTextWrapper}>
-      <SectionLabel>Software Engineering Apprentice · Visa</SectionLabel>
+      <SectionLabel>Software Engineering · Student</SectionLabel>
 
       <h1 className={styles.heroName}>
         Rikki <em className={styles.heroNameEm}>Tomiko</em> Ehrhart

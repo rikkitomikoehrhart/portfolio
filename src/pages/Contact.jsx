@@ -32,7 +32,7 @@ function Contact() {
             </div>
             <div className={styles.detailItem}>
               <span className={styles.detailLabel}>Currently</span>
-              <span className={styles.detailValue}>Apprentice SWE @ Visa</span>
+              <span className={styles.detailValue}>Looking for an Early Careers Role</span>
             </div>
             <div className={styles.detailItem}>
               <span className={styles.detailLabel}>Open to</span>
