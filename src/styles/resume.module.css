@@ -1,0 +1,294 @@
+/* ── ResumePaper ────────────────────────────────── */
+.paper {
+  width: 88%;
+  max-width: 960px;
+  background: #ffffff;
+  box-shadow:
+    0 2px 4px rgba(180, 120, 130, 0.06),
+    0 8px 24px rgba(180, 120, 130, 0.1),
+    0 32px 80px rgba(180, 120, 130, 0.08);
+  padding: 56px 72px;
+  position: relative;
+  z-index: 1;
+}
+
+.topFold {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(to bottom, #f5e0e4, transparent);
+  pointer-events: none;
+}
+
+.summary {
+  font-family: var(--font-sans);
+  font-size: 12px;
+  line-height: 1.85;
+  color: var(--color-text-soft);
+  border-left: 2px solid var(--color-accent);
+  padding-left: 16px;
+  margin-bottom: 28px;
+  font-style: italic;
+}
+
+.body {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 40px;
+  align-items: start;
+}
+
+/* ── ResumeHeader ───────────────────────────────── */
+.headerWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding-bottom: 24px;
+  margin-bottom: 24px;
+  border-bottom: 1px solid var(--color-border);
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.headerName {
+  font-family: var(--font-serif);
+  font-size: 42px;
+  font-weight: 300;
+  color: var(--color-text);
+  line-height: 1.1;
+  margin-bottom: 6px;
+}
+
+.headerNameEm {
+  font-style: italic;
+  color: var(--color-accent);
+}
+
+.headerTagline {
+  font-family: var(--font-serif);
+  font-size: 14px;
+  font-style: italic;
+  color: var(--color-text-muted);
+}
+
+.headerRight {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 4px;
+}
+
+.contactLink {
+  font-family: var(--font-sans);
+  font-size: 11px;
+  color: var(--color-text-muted);
+  text-decoration: none;
+  letter-spacing: 0.02em;
+  transition: color 0.2s ease;
+}
+
+/* ── ResumeSection ──────────────────────────────── */
+.sectionWrapper {
+  margin-bottom: 28px;
+}
+
+.sectionHeading {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.sectionLabel {
+  font-family: var(--font-sans);
+  font-size: 9px;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.sectionRule {
+  flex: 1;
+  height: 0.5px;
+  background: var(--color-border);
+}
+
+/* ── ResumeEducation ────────────────────────────── */
+.eduHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 14px;
+  gap: 12px;
+}
+
+.degree {
+  font-family: var(--font-sans);
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--color-text);
+  margin-bottom: 2px;
+}
+
+.certs {
+  font-family: var(--font-sans);
+  font-size: 11px;
+  color: var(--color-text-soft);
+  margin-bottom: 4px;
+}
+
+.school {
+  font-family: var(--font-serif);
+  font-size: 13px;
+  font-style: italic;
+  color: var(--color-accent);
+}
+
+.eduDate {
+  font-family: var(--font-sans);
+  font-size: 10px;
+  color: var(--color-accent-muted);
+  letter-spacing: 0.06em;
+  font-style: italic;
+  flex-shrink: 0;
+}
+
+.honorsBox {
+  background: var(--color-bg-soft);
+  border: 0.5px solid var(--color-border);
+  padding: 16px 20px;
+}
+
+.honorsLabel {
+  font-family: var(--font-sans);
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.honorsList {
+  list-style-type: disc;
+  padding-left: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.honorsItem {
+  font-family: var(--font-sans);
+  font-size: 11px;
+  color: var(--color-text-soft);
+  line-height: 1.75;
+}
+
+/* ── ResumeEntry ────────────────────────────────── */
+.entryWrapper {
+  padding-bottom: 18px;
+  margin-bottom: 18px;
+  border-bottom: 0.5px solid var(--color-border);
+}
+
+.entryHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 8px;
+  gap: 12px;
+}
+
+.entryLeft {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.entryRight {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 2px;
+  flex-shrink: 0;
+}
+
+.entryTitle {
+  font-family: var(--font-sans);
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--color-text);
+}
+
+.entryOrg {
+  font-family: var(--font-serif);
+  font-size: 13px;
+  font-style: italic;
+  color: var(--color-accent);
+}
+
+/* Shared date/meta style — used by both ResumeEntry and ResumeEducation */
+.dateMeta {
+  font-family: var(--font-sans);
+  font-size: 10px;
+  color: var(--color-accent-muted);
+  letter-spacing: 0.06em;
+  font-style: italic;
+}
+
+.entryLocation {
+  font-family: var(--font-sans);
+  font-size: 10px;
+  color: var(--color-text-muted);
+  letter-spacing: 0.04em;
+}
+
+.bullets {
+  padding-left: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-bottom: 8px;
+}
+
+.bullet {
+  font-family: var(--font-sans);
+  font-size: 11px;
+  color: var(--color-text-soft);
+  line-height: 1.75;
+  list-style-type: disc;
+}
+
+.award {
+  font-family: var(--font-sans);
+  font-size: 11px;
+  color: var(--color-text-soft);
+  font-style: italic;
+  margin-top: 6px;
+  line-height: 1.6;
+}
+
+/* ── ResumeSkills ───────────────────────────────── */
+.skillsWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.skillGroupLabel {
+  font-family: var(--font-sans);
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--color-text-soft);
+  margin-bottom: 7px;
+}
+
+.skillTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}

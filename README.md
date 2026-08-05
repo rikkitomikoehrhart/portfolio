@@ -1,48 +1,16 @@
-# RikkiTomikoEhrhart.com
----
-> I am Rikki Tomiko Ehrhart, an award winning coordinatior and administrator who is looking to transition into the tech industry. I am currently pursuing an **Associates of Applied Science Web Programming** and a **Certificate of Coding and Design**. I have a **Cretificate of Web Programming**. 
-> I am actively involved in **Phi Theta Kappa Honors Society** and **WIT (Women Information Technology)** at Austin Community College. This is my portfolio website to showcase my projects and skills.
+# React + Vite
 
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
---- 
-## Table of Contents
-- [The Website](https://github.com/rikkitomikoehrhart/portfolio#the-website)
-- [Tools and Technologies](https://github.com/rikkitomikoehrhart/portfolio#tools-and-technologies)
-- [ToDos](https://github.com/rikkitomikoehrhart/portfolio#todos)
+Currently, two official plugins are available:
 
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
 
----
-## The Website
-[RikkiTomikoEhrhart.com](https://www.rikkitomikoehrhart.com)
+## React Compiler
 
-<img src="/portfolio/public/projects/1/screenshot1.png" width="33%"> <img src="/portfolio/public/projects/1/screenshot2.png" width="33%"> <img src="/portfolio/public/projects/1/screenshot3.png" width="33%">
-</div>
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-My portfolio site was built on VS Code, it uses CodeIgniter 4.5, and it is housed on Dreamhost.
+## Expanding the ESLint configuration
 
----
-## Tools and Technologies
-| `LANGUAGES` |   `TOOLS`   |  `FEATURES`  |
-|:-----------:|:-----------:|:------------:|
-| HTML | VS Code | Responsive Design|
-| CSS | CodeIgniter | Drop Down Navigation Menu |
-| JavaScript | Figma | Dynamic Views |
-| PHP | MVC | Contact Form |
-| MySQL | Github | Image Gallery |
-| | Database | |
-
-
----
-## ToDos
-The following is a mixture of my wish-list and todos of what I still want to accomplish with my portfolio.
-
-- [x] ~~Create a Contact page~~
-- [x] ~~Re-Style home page so that on mobile my picture is behind my name~~
-- [x] ~~Re-Style Resume page because on mobile some of the sections fall off the page~~
-- [ ] Add a filter to the Portfolio page so people can filter by programming language, tool, features, etc.
-- [ ] Add a search bar to the Portfolio page so people can search by name, description, language, tool, feature, etc.
-- [x] ~~Create a gallery feature on the individual product pages so that users can look through the screenshots.~~
-- [ ] Restyle Resume page and Contact to be more paper-like and flat. 
-- [ ] Add what I have learned to my portfolio entry in my database and to this readme!
-
-
+If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
